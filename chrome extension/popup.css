@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+  font-family: "body-text";
+  src: url("./fonts/LustProSlimNo2/font.woff") format('woff');
+}
+
+@font-face {
+  font-family: "header-text";
+  src: url("./fonts/LustStencilDisplayItalic/font.woff") format('woff');
+}
+
+@font-face {
+  font-family: "body-text2";
+  src: url("./fonts/LustSansMedium/font.woff") format('woff');
+}
+
+* {
+font-family: "body-text";
+font-weight: bold;
+}
+
+body {
+  background-color: #FAF9F6;
+  width: 200px;
+}
+
+main {
+  text-align: center;
+  padding: 0.5em
+}
+
+.popup-title {
+  height: auto;
+  width: 70%;
+  margin-top: 1em;
+  margin-bottom: 2em
+}
+
+#findWord, #deactivate {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  border-radius: 5%;
+  color: white;
+  padding: 13px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: -10px -5px -5px gray;
+}
+
+#deactivate {
+  margin-top: 1em;
+}
+
+#findWord:hover, #deactivate:hover {
+  transform: translate(-1px, -2px);
+}
