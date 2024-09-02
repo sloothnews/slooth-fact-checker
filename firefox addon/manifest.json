@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Slooth Fact Checker",
+  "version": "1.0",
+
+  "description": "Slooth fact checker",
+
+  "icons": {
+    "16": "/icons/slooth-icon-16.png",
+    "32": "/icons/slooth-icon-32.png",
+    "48": "/icons/slooth-icon-48.png",
+    "128": "/icons/slooth-icon-128.png"
+  },
+
+  "content_scripts": [{
+    "matches": ["https://*/*", "http://*/*"],
+    "js": ["script.js"]
+  }],
+
+  "permissions": [
+    "activeTab",
+    "storage",
+    "https://gist.githubusercontent.com/*",
+    "https://raw.githubusercontent.com/*",
+    "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/*",
+    "https://slooth-subscription-site.herokuapp.com/",
+    "unlimitedStorage"
+  ],
+
+  "browser_action": {
+    "default_title": "Click here to open Slooth Factchecker.",
+    "default_popup": "popup.html"
+  }
+
+}
