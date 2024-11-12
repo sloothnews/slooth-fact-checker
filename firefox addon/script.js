@@ -168,7 +168,7 @@ async function callJSON() {
     console.log(window.location.href);
     let finalHref = encodeURIComponent(window.location.href.toString());
     let testArray = [];
-    var jsonFetch = await fetch("https://slooth-survey-site-7815ed1d9c42.herokuapp.com/getfactcheckernotes/?url=" + finalHref)
+    var jsonFetch = await fetch("https://sloothnews.net/getfactcheckernotes/?url=" + finalHref)
     var jsonRes = await jsonFetch.json();
     testArray.push(jsonRes);
     jsonResponse = testArray;
@@ -260,7 +260,7 @@ function runButton() {
         pageContainer.appendChild(pageButton);
         var pageButtonSubClass1 = document.createElement("img");
         pageButtonSubClass1.classList.add("slooth-icon-click-owl");
-        pageButtonSubClass1.src = "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/main_icon_closed.png"
+        pageButtonSubClass1.src = "https://slooth.news/images/main_icon_closed.png"
         pageButton.appendChild(pageButtonSubClass1);
 
         document.body.appendChild(pageContainer);
@@ -273,12 +273,12 @@ function runButton() {
     if(pageButtonAdded !== undefined) {
         pageButtonAdded.addEventListener("click", (e) => {
             console.log("clicked button")
-            if(document.getElementsByClassName("slooth-icon-click-owl")[0].src !== "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/owl_eyes_open.png") {
+            if(document.getElementsByClassName("slooth-icon-click-owl")[0].src !== "https://slooth.news/images/owl_eyes_open.png") {
                 const loadImage = src =>
                 new Promise((resolve, reject) => {
                     resolve(src)
                 });
-                loadImage("https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/owl_eyes_open.png")
+                loadImage("https://slooth.news/images/owl_eyes_open.png")
                 .then(
                     (image) => {
                         document.getElementsByClassName("slooth-icon-click-owl")[0].src = image;
@@ -1457,7 +1457,7 @@ function runButton() {
                 console.log(sloothCheckPopup.length);
                 if(sloothCheckPopup.length !== jsonResponse.length) {
                     alert("By Slooth: This article has changed since it was fact checked on " + jsonResponse[0].entries[0].date.split("_")[0] + ".").preventDefault();
-                    let urlSend = "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/QBqQERTzCYFDK5ygF5y9E2PPddzwRfw22j4jkUCCBNe6N/"
+                    let urlSend = "https://sloothnews.net/QBqQERTzCYFDK5ygF5y9E2PPddzwRfw22j4jkUCCBNe6N/"
                     let dataSend = {
                         url: window.location.href,
                         text: "By Slooth: This article has changed since it was fact checked on " + jsonResponse[0].entries[0].date.split("_")[0].split("-")[1] + "-" + jsonResponse[0].entries[0].date.split("_")[0].split("-")[2] + "-" + jsonResponse[0].entries[0].date.split("_")[0].split("-")[0] + "."
@@ -1478,7 +1478,7 @@ function runButton() {
                 ////console.log(styleSheet);
                 //document.head.appendChild(styleSheet);
             }
-            if(document.getElementsByClassName("slooth-icon-click-owl")[0].src == "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/owl_eyes_open.png") {
+            if(document.getElementsByClassName("slooth-icon-click-owl")[0].src == "https://slooth.news/images/owl_eyes_open.png") {
                 console.log("deactivation button")
                 window.location.href = window.location.href;
             }
@@ -1493,7 +1493,7 @@ function runButton() {
         document.getElementsByClassName("slooth-icon-click-owl")[0].addEventListener("mouseenter", (e) => {
             if(document.getElementsByClassName("slooth-check-popup").length == 0) {
                 console.log(e.target.style.backgroundImage)
-                e.target.src = "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/main_icon_closed.png";
+                e.target.src = "https://slooth.news/images/main_icon_closed.png";
                 let modes = [1, 2, 3, 4];
                 let interval = 250;
                 const loadImage = src =>
@@ -1508,11 +1508,11 @@ function runButton() {
                     console.log(currentNumber);
                     setTimeout(() => {
                         if(currentNumber === 4) {
-                            document.getElementsByClassName("slooth-icon-click-owl")[0].src = "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/main_icon_partiallyclosed4.png";
+                            document.getElementsByClassName("slooth-icon-click-owl")[0].src = "https://slooth.news/images/main_icon_partiallyclosed4.png";
                         }
                         if(currentNumber < 4) {
                             if(document.getElementsByClassName("slooth-check-popup").length == 0) {
-                                loadImage("https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/main_icon_partiallyclosed" + currentNumber + ".png")
+                                loadImage("https://slooth.news/images/main_icon_partiallyclosed" + currentNumber + ".png")
                                 .then(
                                     (image) => {
                                         document.getElementsByClassName("slooth-icon-click-owl")[0].src = image;
@@ -1528,7 +1528,7 @@ function runButton() {
         })
         document.getElementsByClassName("slooth-icon-click-owl")[0].addEventListener("mouseleave", (e) => {
             if(document.getElementsByClassName("slooth-check-popup").length == 0) {
-                e.target.src = "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/main_icon_closed.png";
+                e.target.src = "https://slooth.news/images/main_icon_closed.png";
             }
         })
     }

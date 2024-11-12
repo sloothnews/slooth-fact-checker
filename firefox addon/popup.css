@@ -2,22 +2,36 @@
 
 @font-face {
   font-family: "body-text";
-  src: url("./fonts/LustProSlimNo2/font.woff") format('woff');
+  src: url("./fonts/roboto-fontfacekit/web_fonts/roboto_light_macroman/Roboto-Light-webfont.ttf") format('ttf');
 }
 
 @font-face {
   font-family: "header-text";
-  src: url("./fonts/LustStencilDisplayItalic/font.woff") format('woff');
+  src: url("./fonts/Fancy/font.woff") format('woff');
 }
 
 @font-face {
   font-family: "body-text2";
-  src: url("./fonts/LustSansMedium/font.woff") format('woff');
+  src: url("./fonts/Fancy/font.woff") format('woff');
 }
 
 * {
 font-family: "body-text";
 font-weight: bold;
+}
+
+/* Custom properties */
+:root{
+  --light-color: #fff;
+  --light-color-alt: #e4e5e8;
+  --dark-color: #20083e;
+  --dark-color-alt: #a767e5;
+  --primary-background-color: #131417; /* #fff */
+  --secondary-background-color: #252830;
+  --hover-light-color: var(--light-color);
+  --hover-dark-color: var(--primary-background-color);
+  --font-family: 'Roboto', sans-serif;
+  --font-fancy: 'Fancy';
 }
 
 body {
@@ -34,13 +48,15 @@ main {
   height: auto;
   width: 70%;
   margin-top: 1em;
-  margin-bottom: 2em
+  margin-bottom: 0.5em
 }
 
 #findWord, #deactivate {
-  background-color: #4CAF50; /* Green */
+  background-color: var(--dark-color);
   border: none;
+  /*
   border-radius: 5%;
+  */
   color: white;
   padding: 13px 30px;
   text-align: center;
@@ -55,6 +71,11 @@ main {
   margin-top: 1em;
 }
 
-#findWord:hover, #deactivate:hover {
+#findWord:hover {
   transform: translate(-1px, -2px);
+  background-color: #4CAF50; /* Green */
+}
+#deactivate:hover {
+  transform: translate(-1px, -2px);
+  background-color: #fe0d0d; /* Red */
 }

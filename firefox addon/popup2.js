@@ -19,10 +19,10 @@ let deactivate = document.getElementById("deactivate");
             console.log(currentNumber);
             setTimeout(() => {
                 if(currentNumber === 6) {
-                    document.getElementsByClassName("popup-title")[0].src = "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/owl_eyes_open.png";
+                    document.getElementsByClassName("popup-title")[0].src = "https://slooth.news/images/owl_eyes_open.png";
                 }
                 if(currentNumber < 6) {
-                  loadImage("https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/main_icon_partiallyclosed" + currentNumber + ".png")
+                  loadImage("https://slooth.news/images/main_icon_partiallyclosed" + currentNumber + ".png")
                   .then(
                       (image) => {
                           document.getElementsByClassName("popup-title")[0].src = image;
