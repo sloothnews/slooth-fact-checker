@@ -1,11 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 @font-face {
   font-family: "body-text";
-  src: url("./fonts/MyFontsWebfontsKit/webFonts/LustProSlimNo2/font.woff") format('woff');
+  src: url("./fonts/roboto-fontfacekit/web_fonts/roboto_light_macroman/Roboto-Light-webfont.ttf") format('ttf');
 }
 
 @font-face {
   font-family: "header-text";
-  src: url("./fonts/MyFontsWebfontsKit/webFonts/LustStencilDisplayItalic/font.woff") format('woff');
+  src: url("./fonts/Fancy/font.woff") format('woff');
+}
+
+@font-face {
+  font-family: "body-text2";
+  src: url("./fonts/Fancy/font.woff") format('woff');
 }
 
 * {

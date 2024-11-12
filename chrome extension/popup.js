@@ -27,10 +27,10 @@ findWord.addEventListener("click", () => {
         console.log(currentNumber);
         setTimeout(() => {
             if(currentNumber === 6) {
-                document.getElementsByClassName("popup-title")[0].src = "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/owl_eyes_open.png";
+                document.getElementsByClassName("popup-title")[0].src = "https://slooth.news/images/owl_eyes_open.png";
             }
             if(currentNumber < 6) {
-              loadImage("https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/main_icon_partiallyclosed" + currentNumber + ".png")
+              loadImage("https://slooth.news/images/main_icon_partiallyclosed" + currentNumber + ".png")
               .then(
                   (image) => {
                       document.getElementsByClassName("popup-title")[0].src = image;
@@ -225,7 +225,7 @@ async function getJSON() {
     //}
     let finalHref = encodeURIComponent(window.location.href.toString());
     let testArray = [];
-    var jsonFetch = await fetch("https://slooth-survey-site-7815ed1d9c42.herokuapp.com/getfactcheckernotes/?url=" + finalHref)
+    var jsonFetch = await fetch("https://sloothnews.net/getfactcheckernotes/?url=" + finalHref)
     var jsonRes = await jsonFetch.json();
     testArray.push(jsonRes);
     jsonResponse = testArray;
@@ -238,7 +238,7 @@ async function getJSON() {
             new Promise((resolve, reject) => {
                 resolve(src)
             });
-            loadImage("https://slooth-survey-site-7815ed1d9c42.herokuapp.com/pictures/owl_eyes_open.png")
+            loadImage("https://slooth.news/images/owl_eyes_open.png")
             .then(
                 (image) => {
                     document.getElementsByClassName("slooth-icon-click-owl")[0].src = image;
@@ -1503,7 +1503,7 @@ async function getJSON() {
                 }
                 if(sloothCheckPopup.length !== jsonResponse.length) {
                     alert("By Slooth: This article has changed since it was fact checked on " + jsonResponse[0].entries[0].date.split("_")[0] + ".")
-                    let urlSend = "https://slooth-survey-site-7815ed1d9c42.herokuapp.com/QBqQERTzCYFDK5ygF5y9E2PPddzwRfw22j4jkUCCBNe6N/"
+                    let urlSend = "https://sloothnews.net/QBqQERTzCYFDK5ygF5y9E2PPddzwRfw22j4jkUCCBNe6N/"
                     let dataSend = {
                         url: window.location.href,
                         text: "By Slooth: This article has changed since it was fact checked on " + jsonResponse[0].entries[0].date.split("_")[0].split("-")[1] + "-" + jsonResponse[0].entries[0].date.split("_")[0].split("-")[2] + "-" + jsonResponse[0].entries[0].date.split("_")[0].split("-")[0] + "."
